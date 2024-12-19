@@ -1,5 +1,5 @@
 # Breast-Cancer-Classification
-![Breast](A.png)
+![Breast](A.jpg)
 ## Overview
 This project uses a machine learning model to predict whether a breast tumor is malignant or benign based on various physical characteristics of the tumor cells. The goal is to assist in early diagnosis and treatment planning for breast cancer patients.
 
