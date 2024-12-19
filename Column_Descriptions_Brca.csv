@@ -1,0 +1,32 @@
+Column Name,Description
+x.radius_mean,Mean radius of the tumor
+x.texture_mean,Mean texture of the tumor
+x.perimeter_mean,Mean perimeter of the tumor
+x.area_mean,Mean area of the tumor
+x.smoothness_mean,Mean smoothness of the tumor
+x.compactness_mean,Mean compactness of the tumor
+x.concavity_mean,Mean concavity of the tumor
+x.concave_pts_mean,Mean number of concave points on the tumor
+x.symmetry_mean,Mean symmetry of the tumor
+x.fractal_dim_mean,Mean fractal dimension of the tumor
+x.radius_se,Standard error of the radius
+x.texture_se,Standard error of the texture
+x.perimeter_se,Standard error of the perimeter
+x.area_se,Standard error of the area
+x.smoothness_se,Standard error of the smoothness
+x.compactness_se,Standard error of the compactness
+x.concavity_se,Standard error of the concavity
+x.concave_pts_se,Standard error of the concave points
+x.symmetry_se,Standard error of the symmetry
+x.fractal_dim_se,Standard error of the fractal dimension
+x.radius_worst,Worst-case (maximum) radius
+x.texture_worst,Worst-case texture
+x.perimeter_worst,Worst-case perimeter
+x.area_worst,Worst-case area
+x.smoothness_worst,Worst-case smoothness
+x.compactness_worst,Worst-case compactness
+x.concavity_worst,Worst-case concavity
+x.concave_pts_worst,Worst-case number of concave points
+x.symmetry_worst,Worst-case symmetry
+x.fractal_dim_worst,Worst-case fractal dimension
+y,Target variable indicating benign (B) or malignant (M)
