@@ -15,29 +15,31 @@ selected_features = [
 ]
 
 # Streamlit app
-st.title("Health Prediction App")
-st.write("Enter the feature values to predict whether the person is sick or not.")
+st.title("Breast Cancer Prediction App")
+st.write("Enter the feature values below to determine the health status:")
 
-# User input for each feature
+# Collect user inputs
 user_inputs = []
 for feature in selected_features:
-    value = st.number_input(f"Enter value for {feature}", value=0.0)
+    value = st.number_input(f"Enter value for {feature}:", min_value=0.0, step=0.1)
     user_inputs.append(value)
 
 # Convert user inputs into a numpy array
 input_array = np.array([user_inputs])
 
-# Prediction button
+# Add prediction functionality
 if st.button("Predict"):
-    # Make prediction
-    prediction = model.predict(input_array)
+    # Predict using the model
+    prediction = model.predict(input_array)[0]
     prediction_proba = model.predict_proba(input_array)
 
     # Display results
-    if prediction[0] == 1:
-        st.error("The person is predicted to be SICK 🚨")
+    if prediction == 1:
+        st.error("🚨 The person has a high probability of breast cancer. Please consult a doctor immediately.")
     else:
-        st.success("The person is predicted to be HEALTHY ✅")
+        st.success("✅ The person is predicted to be healthy.")
 
-    # Display probabilities
-    st.write(f"Prediction Probabilities: Healthy: {prediction_proba[0][0]:.2f}, Sick: {prediction_proba[0][1]:.2f}")
+    # Display prediction probabilities
+    st.write("### Prediction Probabilities:")
+    st.write(f"- Healthy: {prediction_proba[0][0]:.2f}")
+    st.write(f"- Sick: {prediction_proba[0][1]:.2f}")
